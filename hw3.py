@@ -5,9 +5,6 @@ import re
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import mlab
-import time
-from pymystem3 import Mystem
-from sklearn import grid_search, svm
 
 with open('anna.txt', encoding='utf-8') as f:
     anna = f.read()
@@ -50,7 +47,7 @@ data = np.vstack((anna_data, sonet_data))
 p = mlab.PCA(data, True)
 N = len(anna_data)
 plt.plot(p.Y[:N,0], p.Y[:N,1], 'og', p.Y[N:,0], p.Y[N:,1], 'sb')
-#plt.show()
+plt.show()
 
 	
 
